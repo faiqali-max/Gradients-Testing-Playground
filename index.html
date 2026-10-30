@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient-color-viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body class="body">
+    <!-- #673de6   #613bee -->
+    <nav class="nav">
+        <ul class="item">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <ul class="item">
+            <li><a href="linear.html">Linear</a></li>
+        </ul>
+        <ul class="item">
+            <li><a href="radial.html">Radial</a></li>
+        </ul>
+        <ul class="item">
+            <li><a href="conic.html">Conic</a></li>
+        </ul>
+    </nav>
+    <div class="intro">
+        <div class="card-one">
+            <h1 class="h-one"></h1>
+            <h2 class="h-two">Created By <span class="span">FAIQ ALI</span></h2>
+            <p class="p-one">A place where you can test background colors with gradients.</p>
+            <h3 class="h-three">About Me</h3>
+            <a class="button" href="https://faiqali-portfolio.vercel.app"
+   target="_blank" rel="noopener noreferrer">My Website</a>
+            <a class="button" href="https://github.com/faiqali-max"
+   target="_blank" rel="noopener noreferrer">My Github</a>
+        </div>
+        <div class="card-two">
+            <div class="cardone">
+                <h2 class="h-three">LINEAR GRADIENT</h2>
+                <p class="p-two">Blend colors along a straight line to create smooth, directional transitions.
+                    Try different angles and color combinations.</p>
+                <a class="button" href="linear.html">Test It</a>
+            </div>
+            <div class="cardtwo">
+                <h2 class="h-three">RADIAL GRADIENT</h2>
+                <p class="p-two">Spread colors outward from a central point to create a circular glow or spotlight
+                    effect. Adjust the center and shape to change the look.</p>
+                    <a class="button" href="radial.html">Test It</a>
+            </div>
+            <div class="cardthree">
+                <h2 class="h-three">CONIC GRADIENT</h2>
+                <p class="p-two">Rotate colors around a central point to create a circular, color-wheel effect.
+                    Perfect for vibrant rings and bold patterns.</p>
+                    <a class="button" href="conic.html">Test It</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer"></footer>
+</body>
+<style>
+    html {
+        min-height: 100%;
+        background: linear-gradient(
+            180deg,
+            rgb(48, 46, 46) 0%,
+            grey 25%,
+            white 60%,
+            rgb(250, 100, 0) 100%
+        ) fixed;
+        font-family: sans-serif;
+    }
+
+    .body{
+        margin: 0;
+        background: transparent;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+    .intro{
+        display:grid;
+        place-items: center;
+        margin-top:100px;
+    }
+
+    .nav{
+        margin:auto;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        gap:10px;
+        background: linear-gradient(140deg, rgba(0, 255, 255,0.7), rgba(72, 72, 247, 0.7), rgba(0, 0, 0,0.7), rgba(72, 72, 247,0.7), rgba(0, 255, 255,0.7));
+        width:400px;
+        border-radius: 0px 25px 0px 25px;
+    }
+
+    .item {
+        list-style: none;
+        margin: 10px;
+        padding: 0;
+    }
+
+    .item li {
+        list-style: none;
+    }
+
+    .item a {
+        text-decoration: none;
+        padding-left: 0;
+        font-weight: bold;
+        box-sizing: border-box;
+        background:linear-gradient(110deg,#00ffff, #00a2ff, white, #00a2ff, #00ffff);
+        -webkit-background-clip:text ;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+        font-size: large;
+        border-radius: 50px;
+    }
+
+    .card-one{
+        max-width:400px;
+        min-width:380px;
+        height:400px;
+        background: linear-gradient(140deg, rgba(0, 255, 255,0.7), rgba(72, 72, 247, 0.7), rgba(0, 0, 0,0.7), rgba(72, 72, 247,0.7), rgba(0, 255, 255,0.7));
+        text-align: center;
+        color:white;
+        border-radius: 50px;
+        padding-top: 10%;
+    }
+
+    .h-one{
+        font-size:28px;
+        margin-top:15px;
+        text-align: center;
+        width:380px;
+        height:100px;
+        margin: auto;
+        background:linear-gradient(140deg,#00ffff, #00a2ff, white, #00a2ff, #00ffff);
+        -webkit-background-clip:text ;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .p-one{
+        max-width: 80%;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    .h-two{
+        font-size:32px;
+        margin-top: 5px;
+        background:linear-gradient(110deg,#00ffff, #00a2ff, white, #00a2ff, #00ffff);
+        -webkit-background-clip:text ;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .h-three{
+        font-size: 28px;
+        background:linear-gradient(140deg,#00ffff, #00a2ff, white, #00a2ff, #00ffff);
+        -webkit-background-clip:text ;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .button{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width:80px;
+        height:50px;
+        margin:15px 20px;
+        cursor: pointer;
+        background:linear-gradient(140deg,#0084ff, #00ffff, white, #00ffff, #0084ff);
+        border:none;
+        border-radius: 8px;
+        color: #6f27f7;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .card-two{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        margin-top:50px;
+        margin-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .cardone, .cardtwo, .cardthree{
+        max-width:350px;
+        height: 400px;
+        color:white;
+        margin:20px auto;
+        background: linear-gradient(140deg, rgba(0, 255, 255,0.7), rgba(72, 72, 247, 0.7), rgba(0, 0, 0,0.7), rgba(72, 72, 247,0.7), rgba(0, 255, 255,0.7));
+        padding:3px;
+        text-align: center;
+        border-radius:30px;
+        overflow: inherit;
+    }
+
+    .p-two{
+        height:150px;
+    }
+    .footer{
+        width:100vw;
+        height:80px;
+        text-align: center;
+        font-size: 35px;
+        font-weight: bold;
+        color:white;
+    }
+</style>
+<script>
+     var typed = new Typed(".h-one", {
+      strings: ["WELCOME","TO","BACKGROUND GRADIENT TESTING PLAYGROUND"],
+      typeSpeed: 200,
+      backSpeed: 50,
+      showCursor: false,  
+      loop: true
+    });
+    var typed = new Typed(".footer", {
+      strings: ["Created By Faiq Ali","A Self Taught Developer"],
+      typeSpeed: 200,
+      backSpeed: 50,
+      showCursor: false,  
+      loop: true
+    });
+
+</script>
+
+</html>

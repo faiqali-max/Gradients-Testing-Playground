@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient-Color-Viewer</title>
+</head>
+
+<body>
+    <div class=body>
+        
+        <div class="box">
+            <h2 class="heading">GRADIENT COLOR VIEWER</h2>
+            <h2 class="heading">RADIAL GRADIENT</h2>
+
+            <p class="para" >Enter the shape you want.</p>
+            <input class="input" id="shape" placeholder="Ex: circle" required></input>
+            <p class="para" >Enter the size you want.</p>
+            <input class="input" id="size" placeholder="Ex: 150" required></input>
+            <p class="para">Enter the position you want</p>
+            <input class="input" id="position" placeholder="Ex: center" required></input>  
+                <p class="para">Select the colors you want from the boxes below. Each input is required.</p>
+                <input type="color" class="input-color" id="color-one" required></input>
+                <input type="color" class="input-color" id="color-two" required></input>
+                <input type="color" class="input-color" id="color-three" required></input>
+                <button class="input-color" id="submit">Proceed</button>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <a href="index.html" class="footer-btn">Home</a>
+    </footer>
+</body>
+<style>
+    .body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+
+    .box {
+        position: relative;
+        background: linear-gradient(140deg, cyan, rgb(72, 72, 247), black, rgb(72, 72, 247), cyan);
+        width: 350px;
+        text-align: center;
+        height: 600px;
+        border-radius: 20px;
+    }
+
+    .box::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        padding: 12px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        background: conic-gradient(blue, cyan, blue, cyan);
+        filter: blur(25px);
+        border-radius: 20px;
+        opacity: 1;
+    }
+    
+    .heading{
+        background:linear-gradient(140deg,rgb(8, 61, 121),rgb(4, 39, 78),rgb(1, 255, 255),rgb(8, 60, 119),rgb(8, 61, 121));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size:28px;
+        margin-top:5px;
+        margin-bottom:10px;
+    }
+    .para{
+        margin-top:16px;
+        margin-bottom:10px;
+    }
+
+    .input {
+        width: 200px;
+        height: 25px;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+        cursor:pointer;
+        color: blue;
+        background-color:cyan;
+        border: 2px solid white;
+    }
+
+    .input::placeholder {
+        text-align: center;
+        color: blue;
+    }
+
+    .input-color {
+        border: none;
+        width: 200px;
+        height: 30px;
+        margin: 5px 0px;
+        border-radius: 10px;
+        cursor:pointer;
+    }
+
+    #submit {
+        margin-top: 18px;
+        font-weight: bold;
+        font-size: 20px;
+        width: 150px;
+        height: 40px;
+        color: white;
+         background:linear-gradient(140deg,rgb(8, 61, 121),rgb(4, 39, 78),rgb(1, 255, 255),rgb(8, 60, 119),rgb(8, 61, 121));
+        border: 2px solid black;
+        cursor:pointer;
+    }
+    .footer{
+        width:100vw;
+        height:100px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:rgb(250, 206, 250)
+    }
+    .footer-btn{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width:80px;
+        height:50px;
+        margin:15px 20px;
+        cursor: pointer;
+        background:linear-gradient(140deg,#0084ff, #00ffff, white, #00ffff, #0084ff);
+        border:none;
+        border-radius: 8px;
+        color: #6f27f7;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+</style>
+<script>
+
+    // Initializing the variables
+    let body = document.querySelector(".body");
+    let shape = document.querySelector("#shape");
+    let position = document.querySelector("#position");
+    let size = document.querySelector("#size");
+    let colorOne = document.querySelector("#color-one");
+    let colorTwo = document.querySelector("#color-two");
+    let colorThree = document.querySelector("#color-three");
+    let submitButton = document.querySelector("#submit");
+
+    // The initial color of the color pickers
+    colorOne.style.backgroundColor = "Cyan";
+    colorTwo.style.backgroundColor = "Cyan";
+    colorThree.style.backgroundColor = "Cyan";
+
+
+    submitButton.addEventListener("click", () => {
+
+        // Now reading the input values of all the elements and using them for background of the whole screen
+        let shapeValue = shape.value;
+        let positionValue = position.value;
+        let sizeValue = size.value;
+        let colorOneValue = colorOne.value;
+        let colorTwoValue = colorTwo.value;
+        let colorThreeValue = colorThree.value;
+
+        // Now grand variable storing all the input values inside
+        let grand = `radial-gradient(${shapeValue} ${sizeValue}px at ${positionValue},${colorOneValue},${colorTwoValue},${colorThreeValue})`;
+
+        // Action
+        body.style.background = grand;
+    })
+
+
+</script>
+
+</html>
